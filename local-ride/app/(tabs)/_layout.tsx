@@ -3,26 +3,33 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { HapticTab } from '@/components/haptic-tab';
+import { useAppSettings } from '@/context/AppSettingsContext';
+import { t } from '@/translations';
 
 const YELLOW = '#FFD700';
 const GREY = '#AAAAAA';
 
 export default function TabLayout() {
+  const { isDark, language } = useAppSettings();
+  const lang = language.code;
+  const tabBg = isDark ? '#1A1A1A' : '#FFFFFF';
+  const tabBorder = isDark ? '#2C2C2E' : '#F0F0F0';
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarActiveTintColor: YELLOW,
-        tabBarInactiveTintColor: GREY,
+        tabBarInactiveTintColor: isDark ? '#666' : GREY,
         tabBarStyle: {
-          backgroundColor: '#1A1A1A',
-          borderTopWidth: 0,
+          backgroundColor: tabBg,
+          borderTopWidth: 1,
+          borderTopColor: tabBorder,
           height: Platform.OS === 'ios' ? 84 : 64,
           paddingBottom: Platform.OS === 'ios' ? 24 : 8,
           paddingTop: 8,
           shadowColor: '#000',
-          shadowOpacity: 0.3,
+          shadowOpacity: isDark ? 0.4 : 0.1,
           shadowOffset: { width: 0, height: -4 },
           shadowRadius: 12,
           elevation: 16,
@@ -34,24 +41,12 @@ export default function TabLayout() {
         },
       }}
     >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Activity',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time" size={size} color={color} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="index" options={{ title: t('home', lang),
+          tabBarIcon: ({ color, size }) => <Ionicons name="home" size={size} color={color} /> }} />
+      <Tabs.Screen name="explore" options={{ title: t('rides', lang),
+          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="car" size={size} color={color} /> }} />
+      <Tabs.Screen name="account" options={{ title: t('account', lang),
+          tabBarIcon: ({ color, size }) => <Ionicons name="person" size={size} color={color} /> }} />
     </Tabs>
   );
 }

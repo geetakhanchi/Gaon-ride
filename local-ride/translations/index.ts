@@ -1,0 +1,317 @@
+// Key UI strings translated into all 22 Indian scheduled languages + British English
+// Usage: t('save', langCode)  →  returns translated string, falls back to English
+
+export type TranslationKey =
+  | 'save' | 'cancel' | 'edit' | 'back' | 'link' | 'unlink' | 'change'
+  | 'home' | 'rides' | 'account'
+  | 'personal_info' | 'safety' | 'login_security' | 'payment' | 'settings' | 'help_support' | 'logout'
+  | 'full_name' | 'contact_number' | 'email_address' | 'add_photo' | 'change_photo'
+  | 'language' | 'theme' | 'delete_account' | 'about'
+  | 'light_mode' | 'dark_mode' | 'system_mode'
+  | 'login_by_email' | 'login_by_phone'
+  | 'privacy_policy' | 'terms_conditions' | 'company_overview'
+  | 'where_to' | 'current_location' | 'book_now'
+  | 'verify_identity' | 'link_now' | 'preferences' | 'danger_zone'
+  | 'bike' | 'auto' | 'private_car' | 'bike_taxi' | 'jeep' | 'private_bus' | 'govt_bus' | 'car_taxi'
+  | 'rentals' | 'intercity' | 'package' | 'scheduled' | 'recent'
+  | 'ride_history' | 'no_rides_yet' | 'loading_rides' | 'retry'
+  | 'popular_places' | 'search_results' | 'estimated_fare' | 'eta' | 'cash' | 'confirm' | 'pickup' | 'drop'
+  | 'subtitle_personal' | 'subtitle_safety' | 'subtitle_login' | 'subtitle_payment' | 'subtitle_settings' | 'subtitle_support'
+  | 'wallet' | 'wallet_balance' | 'add_money' | 'credit_debit_card' | 'internet_banking'
+  | 'upi' | 'gpay' | 'phonepe' | 'paytm' | 'cards' | 'add_card' | 'qr_pay' | 'payment_methods' | 'transaction_history'
+  | 'paid' | 'refund'
+  | 'safety_hub' | 'sos' | 'emergency' | 'trusted_contacts' | 'add_contact'
+  | 'share_trip' | 'fake_call' | 'verify_boarding' | 'night_safety' | 'women_safety'
+  | 'route_deviation' | 'call_police' | 'call_ambulance' | 'women_helpline';
+
+type Translations = Record<TranslationKey, string>;
+type LangMap = Record<string, Translations>;
+
+const BASE: Translations = {
+  save: 'Save', cancel: 'Cancel', edit: 'Edit', back: 'Back', link: 'Link', unlink: 'Unlink', change: 'Change',
+  home: 'Home', rides: 'Rides', account: 'Account',
+  personal_info: 'Personal Info', safety: 'Safety', login_security: 'Login & Security',
+  payment: 'Payment', settings: 'Settings', help_support: 'Help & Support', logout: 'Logout',
+  full_name: 'Full Name', contact_number: 'Contact Number', email_address: 'Email Address',
+  add_photo: 'Add Profile Photo', change_photo: 'Change Photo',
+  language: 'Language', theme: 'Theme', delete_account: 'Delete Account', about: 'About',
+  light_mode: 'Light Mode', dark_mode: 'Dark Mode', system_mode: 'System',
+  login_by_email: 'Email', login_by_phone: 'Phone Number',
+  privacy_policy: 'Privacy Policy', terms_conditions: 'Terms & Conditions', company_overview: 'Company Overview',
+  where_to: 'Where to?', current_location: 'Current Location', book_now: 'Book Now',
+  verify_identity: 'Verify Identity', link_now: 'Link Now', preferences: 'Preferences', danger_zone: 'Danger Zone',
+  bike: 'Bike', auto: 'Auto', private_car: 'Private Car', bike_taxi: 'Bike Taxi', jeep: 'Jeep', private_bus: 'Private Bus', govt_bus: 'Govt Bus', car_taxi: 'Car Taxi',
+  rentals: 'Rentals', intercity: 'Intercity', package: 'Package', scheduled: 'Scheduled', recent: 'Recent',
+  ride_history: 'Ride History', no_rides_yet: 'No rides yet', loading_rides: 'Loading your rides...', retry: 'Retry',
+  popular_places: 'Popular Places', search_results: 'Search Results', estimated_fare: 'Estimated Fare', eta: 'ETA', cash: 'Cash', confirm: 'Confirm', pickup: 'Pickup', drop: 'Drop',
+  subtitle_personal: 'Name, phone, email', subtitle_safety: 'Emergency contacts & safety', subtitle_login: 'Password, PIN & linked accounts',
+  subtitle_payment: 'Manage payment methods', subtitle_settings: 'Language, theme & more', subtitle_support: 'FAQs and contact us',
+  wallet: 'Wallet', wallet_balance: 'Wallet Balance', add_money: 'Add Money', credit_debit_card: 'Credit / Debit Card', internet_banking: 'Internet Banking',
+  upi: 'UPI', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'Cards', add_card: 'Add Card', qr_pay: 'QR Pay', payment_methods: 'Payment Methods',
+  transaction_history: 'Transaction History', paid: 'Paid', refund: 'Refund',
+  safety_hub: 'Safety Hub', sos: 'SOS', emergency: 'Emergency', trusted_contacts: 'Trusted Contacts',
+  add_contact: 'Add Contact', share_trip: 'Share Trip', fake_call: 'Fake Call',
+  verify_boarding: 'Verify Before Boarding', night_safety: 'Night Safety', women_safety: "Women's Safety",
+  route_deviation: 'Route Deviation', call_police: 'Call Police', call_ambulance: 'Call Ambulance',
+  women_helpline: 'Women Helpline',
+};
+
+const TRANSLATIONS: LangMap = {
+  'en-GB': BASE,
+
+  'hi': {
+    save: 'सहेजें', cancel: 'रद्द करें', edit: 'संपादित करें', back: 'वापस', link: 'लिंक करें', unlink: 'अनलिंक', change: 'बदलें',
+    home: 'होम', rides: 'यात्राएँ', account: 'खाता',
+    personal_info: 'व्यक्तिगत जानकारी', safety: 'सुरक्षा', login_security: 'लॉगिन और सुरक्षा',
+    payment: 'भुगतान', settings: 'सेटिंग्स', help_support: 'सहायता', logout: 'लॉग आउट',
+    full_name: 'पूरा नाम', contact_number: 'संपर्क नंबर', email_address: 'ईमेल पता',
+    add_photo: 'प्रोफ़ाइल फ़ोटो जोड़ें', change_photo: 'फ़ोटो बदलें',
+    language: 'भाषा', theme: 'थीम', delete_account: 'खाता हटाएं', about: 'के बारे में',
+    light_mode: 'लाइट मोड', dark_mode: 'डार्क मोड', system_mode: 'सिस्टम',
+    login_by_email: 'ईमेल', login_by_phone: 'फ़ोन नंबर',
+    privacy_policy: 'गोपनीयता नीति', terms_conditions: 'नियम और शर्तें', company_overview: 'कंपनी परिचय',
+    where_to: 'कहाँ जाना है?', current_location: 'वर्तमान स्थान', book_now: 'अभी बुक करें',
+    verify_identity: 'पहचान सत्यापित करें', link_now: 'अभी लिंक करें', preferences: 'प्राथमिकताएं', danger_zone: 'खतरे का क्षेत्र',
+    bike: 'बाइक', auto: 'ऑटो', private_car: 'प्राइवेट कार', bike_taxi: 'बाइक टैक्सी', jeep: 'जीप', private_bus: 'प्राइवेट बस', govt_bus: 'सरकारी बस', car_taxi: 'कार टैक्सी',
+    rentals: 'किराये', intercity: 'इंटरचिटी', package: 'पैकेज', scheduled: 'शेड्यूलड', recent: 'हाल ही का',
+    ride_history: 'यात्रा इतिहास', no_rides_yet: 'कोई यात्रा नहीं', loading_rides: 'लोड हो रहा है...', retry: 'पुनः प्रयास करें',
+    popular_places: 'लोकप्रिय स्थान', search_results: 'खोज परिणाम', estimated_fare: 'अनुमानित किराया', eta: 'आगमन समय', cash: 'नकद', confirm: 'पुष्टि करें', pickup: 'पिकअप', drop: 'ड्रॉप',
+    subtitle_personal: 'नाम, फोन, ईमेल', subtitle_safety: 'आपातकालीन संपर्क और सुरक्षा', subtitle_login: 'पासवर्ड, पिन और लिंक्ड खाते',
+    subtitle_payment: 'भुगतान के तरीके प्रबंधित करें', subtitle_settings: 'भाषा, थीम और बहुत कुछ', subtitle_support: 'अक्सर पूछे जाने वाले प्रश्न और हमसे संपर्क करें',
+    wallet: 'वॉलेट', wallet_balance: 'वॉलेट बैलेंस', add_money: 'पैसे जोड़ें', credit_debit_card: 'क्रेडिट / डेबिट कार्ड', internet_banking: 'इंटरनेट बैंकिंग',
+    upi: 'यूपीआई (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'कार्ड', add_card: 'कार्ड जोड़ें', qr_pay: 'क्यूआर (QR) भुगतान', payment_methods: 'भुगतान के तरीके',
+    transaction_history: 'लेनदेन इतिहास', paid: 'भुगतान किया', refund: 'रिफंड',
+    safety_hub: 'सुरक्षा केंद्र', sos: 'आपातकाल', emergency: 'इमरजेंसी', trusted_contacts: 'विश्वसनीय संपर्क',
+    add_contact: 'संपर्क जोड़ें', share_trip: 'यात्रा शेयर करें', fake_call: 'नकली कॉल',
+    verify_boarding: 'बोर्डिंग से पहले जाँचें', night_safety: 'रात की सुरक्षा', women_safety: 'महिला सुरक्षा',
+    route_deviation: 'मार्ग विचलन', call_police: 'पुलिस को कॉल करें', call_ambulance: 'एम्बुलेंस',
+    women_helpline: 'महिला हेल्पलाइन',
+  },
+
+  'bn': {
+    save: 'সংরক্ষণ', cancel: 'বাতিল', edit: 'সম্পাদনা', back: 'ফিরে যান', link: 'লিঙ্ক', unlink: 'আনলিঙ্ক', change: 'পরিবর্তন',
+    home: 'হোম', rides: 'যাত্রা', account: 'অ্যাকাউন্ট',
+    personal_info: 'ব্যক্তিগত তথ্য', safety: 'নিরাপত্তা', login_security: 'লগইন ও নিরাপত্তা',
+    payment: 'পেমেন্ট', settings: 'সেটিংস', help_support: 'সাহায্য', logout: 'লগ আউট',
+    full_name: 'পুরো নাম', contact_number: 'যোগাযোগ নম্বর', email_address: 'ইমেল ঠিকানা',
+    add_photo: 'প্রোফাইল ছবি যোগ করুন', change_photo: 'ছবি পরিবর্তন',
+    language: 'ভাষা', theme: 'থিম', delete_account: 'অ্যাকাউন্ট মুছুন', about: 'সম্পর্কে',
+    light_mode: 'আলো মোড', dark_mode: 'অন্ধকার মোড', system_mode: 'সিস্টেম',
+    login_by_email: 'ইমেল', login_by_phone: 'ফোন নম্বর',
+    privacy_policy: 'গোপনীয়তা নীতি', terms_conditions: 'শর্তাবলী', company_overview: 'কোম্পানি পরিচিতি',
+    where_to: 'কোথায় যাবেন?', current_location: 'বর্তমান অবস্থান', book_now: 'এখনই বুক করুন',
+    verify_identity: 'পরিচয় যাচাই', link_now: 'এখনই লিঙ্ক', preferences: 'পছন্দ', danger_zone: 'বিপদ অঞ্চল',
+    bike: 'বাইক', auto: 'অটো', private_car: 'প্রাইভেট কার', bike_taxi: 'বাইক ট্যাক্সি', jeep: 'জিপ', private_bus: 'প্রাইভেট বাস', govt_bus: 'সরকারি বাস', car_taxi: 'কার ট্যাক্সি',
+    rentals: 'ভাড়া', intercity: 'আন্তঃনগর', package: 'প্যাকেজ', scheduled: 'নির্ধারিত', recent: 'সাম্প্রতিক',
+    ride_history: 'যাত্রার ইতিহাস', no_rides_yet: 'কোনো যাত্রা নেই', loading_rides: 'লোড হচ্ছে...', retry: 'পুনরায় চেষ্টা করুন',
+    popular_places: 'জনপ্রিয় স্থান', search_results: 'অনুসন্ধানের ফলাফল', estimated_fare: 'আনুমানিক ভাড়া', eta: 'আগমনের সময়', cash: 'নগদ', confirm: 'নিশ্চিত করুন', pickup: 'পিকআপ', drop: 'ড্রপ',
+    subtitle_personal: 'নাম, ফোন, ইমেল', subtitle_safety: 'জরুরি যোগাযোগ ও নিরাপত্তা', subtitle_login: 'পাসওয়ার্ড, পিন এবং লিঙ্ক করা অ্যাকাউন্ট',
+    subtitle_payment: 'পেমেন্ট পদ্ধতি পরিচালনা করুন', subtitle_settings: 'ভাষা, থিম এবং আরও অনেক কিছু', subtitle_support: 'সাধারণ জিজ্ঞাসা এবং যোগাযোগ',
+    wallet: 'ওয়ালেট', wallet_balance: 'ওয়ালেট ব্যালেন্স', add_money: 'টাকা যোগ করুন', credit_debit_card: 'ক্রেডিট / ডেবিট কার্ড', internet_banking: 'ইন্টারনেট ব্যাঙ্কিং',
+    upi: 'ইউপিআই (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'কার্ড', add_card: 'কার্ড যোগ করুন', qr_pay: 'কিউআর (QR) পেমেন্ট', payment_methods: 'উপার্জন পদ্ধতি',
+    transaction_history: 'লেনদেনের ইতিহাস', paid: 'পরিশোধিত', refund: 'রিফান্ড',
+  },
+
+  'te': {
+    save: 'సేవ్', cancel: 'రద్దు', edit: 'సవరించు', back: 'వెనక్కి', link: 'లింక్', unlink: 'అన్‌లింక్', change: 'మార్చు',
+    home: 'హోమ్', rides: 'రైడ్‌లు', account: 'ఖాతా',
+    personal_info: 'వ్యక్తిగత సమాచారం', safety: 'భద్రత', login_security: 'లాగిన్ & భద్రత',
+    payment: 'చెల్లింపు', settings: 'సెట్టింగ్‌లు', help_support: 'సహాయం', logout: 'లాగ్ అవుట్',
+    full_name: 'పూర్తి పేరు', contact_number: 'సంప్రదింపు నంబర్', email_address: 'ఇమెయిల్ చిరునామా',
+    add_photo: 'ప్రొఫైల్ ఫోటో జోడించు', change_photo: 'ఫోటో మార్చు',
+    language: 'భాష', theme: 'థీమ్', delete_account: 'ఖాతా తొలగించు', about: 'గురించి',
+    light_mode: 'లైట్ మోడ్', dark_mode: 'డార్క్ మోడ్', system_mode: 'సిస్టమ్',
+    login_by_email: 'ఇమెయిల్', login_by_phone: 'ఫోన్ నంబర్',
+    privacy_policy: 'గోప్యతా విధానం', terms_conditions: 'నిబంధనలు', company_overview: 'కంపెనీ వివరణ',
+    where_to: 'ఎక్కడికి?', current_location: 'ప్రస్తుత స్థానం', book_now: 'ఇప్పుడే బుక్ చేయి',
+    verify_identity: 'గుర్తింపు ధృవీకరించు', link_now: 'ఇప్పుడే లింక్', preferences: 'ప్రాధాన్యతలు', danger_zone: 'ప్రమాద జోన్',
+    bike: 'బైక్', auto: 'ఆటో', private_car: 'ప్రైవేట్ కార్', bike_taxi: 'బైక్ టాక్సీ', jeep: 'జీప్', private_bus: 'ప్రైవేట్ బస్సు', govt_bus: 'ప్రభుత్వ బస్సు', car_taxi: 'కార్ టాక్సీ',
+    rentals: 'అద్దెలు', intercity: 'ఇంటర్సిటీ', package: 'ప్యాకేజీ', scheduled: 'షెడ్యూల్డ్', recent: 'ఇటీవలి',
+    ride_history: 'రైడ్ చరిత్ర', no_rides_yet: 'రైడ్‌లు లేవు', loading_rides: 'లోడ్ అవుతోంది...', retry: 'మళ్లీ ప్రయత్నించండి',
+    popular_places: 'ప్రసిద్ధ ప్రదేశాలు', search_results: 'శోధన ఫలితాలు', estimated_fare: 'అంచనా ఛార్జీ', eta: 'రాక సమయం', cash: 'నగదు', confirm: 'నిర్ధారించు', pickup: 'పికప్', drop: 'డ్రాప్',
+    subtitle_personal: 'పేరు, ఫోన్, ఇమెయిల్', subtitle_safety: 'అత్యవసర పరిచయాలు & భద్రత', subtitle_login: 'పాస్వర్డ్, పిన్ & లింక్ చేయబడిన ఖాతాలు',
+    subtitle_payment: 'చెల్లింపు పద్ధతులను నిర్వహించండి', subtitle_settings: 'భాష, థీమ్ & మరిన్ని', subtitle_support: 'తరచుగా అడిగే ప్రశ్నలు & మమ్మల్ని సంప్రదించండి',
+    wallet: 'వాలెట్', wallet_balance: 'వాలెట్ బ్యాలెన్స్', add_money: 'డబ్బు జోడించండి', credit_debit_card: 'క్రెడిట్ / డెబిట్ కార్డ్', internet_banking: 'ఇంటర్నెట్ బ్యాంకింగ్',
+    upi: 'యూపీఐ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'కార్డులు', add_card: 'కార్డ్ జోడించండి', qr_pay: 'క్యూఆర్ (QR) పే', payment_methods: 'చెల్లింపు పద్ధతులు',
+    transaction_history: 'లావాదేవీల చరిత్ర', paid: 'చెల్లించబడింది', refund: 'వాపసు',
+  },
+
+  'mr': {
+    save: 'जतन करा', cancel: 'रद्द करा', edit: 'संपादित करा', back: 'मागे', link: 'लिंक करा', unlink: 'अनलिंक', change: 'बदला',
+    home: 'मुख्यपृष्ठ', rides: 'प्रवास', account: 'खाते',
+    personal_info: 'वैयक्तिक माहिती', safety: 'सुरक्षा', login_security: 'लॉगिन आणि सुरक्षा',
+    payment: 'पेमेंट', settings: 'सेटिंग्ज', help_support: 'मदत', logout: 'लॉग आउट',
+    full_name: 'पूर्ण नाव', contact_number: 'संपर्क क्रमांक', email_address: 'ईमेल पत्ता',
+    add_photo: 'प्रोफाइल फोटो जोडा', change_photo: 'फोटो बदला',
+    language: 'भाषा', theme: 'थीम', delete_account: 'खाते हटवा', about: 'बद्दल',
+    light_mode: 'लाइट मोड', dark_mode: 'डार्क मोड', system_mode: 'सिस्टम',
+    login_by_email: 'ईमेल', login_by_phone: 'फोन नंबर',
+    privacy_policy: 'गोपनीयता धोरण', terms_conditions: 'अटी व शर्ती', company_overview: 'कंपनी ओव्हरव्यू',
+    where_to: 'कुठे जायचे?', current_location: 'सध्याचे स्थान', book_now: 'आत्ता बुक करा',
+    verify_identity: 'ओळख सत्यापित करा', link_now: 'आत्ता लिंक करा', preferences: 'प्राधान्ये', danger_zone: 'धोका क्षेत्र',
+    bike: 'बाईक', auto: 'ऑटो', private_car: 'प्रायव्हेट कार', bike_taxi: 'बाईक टॅक्सी', jeep: 'जीप', private_bus: 'प्रायव्हेट बस', govt_bus: 'सरकारी बस', car_taxi: 'कार टॅक्सी',
+    rentals: 'भाड्याने', intercity: 'इंटरसिटी', package: 'पॅकेज', scheduled: 'शेड्यूल', recent: 'अलीकडील',
+    ride_history: 'प्रवासाचा इतिहास', no_rides_yet: 'अद्याप प्रवास नाही', loading_rides: 'प्रवास लोड करत आहे...', retry: 'पुन्हा प्रयत्न करा',
+    popular_places: 'लोकप्रिय ठिकाणे', search_results: 'शोध परिणाम', estimated_fare: 'अंदाजे भाडे', eta: 'आगमनाची वेळ', cash: 'रोख', confirm: 'निश्चित करा', pickup: 'पिकअप', drop: 'ड्रॉप',
+    subtitle_personal: 'नाव, फोन, ईमेल', subtitle_safety: 'आपत्कालीन संपर्क आणि सुरक्षा', subtitle_login: 'पासवर्ड, पिन आणि लिंक केलेली खाती',
+    subtitle_payment: 'पेमेंट पद्धती व्यवस्थापित करा', subtitle_settings: 'भाषा, थीम आणि बरेच काही', subtitle_support: 'नेहमी विचारले जाणारे प्रश्न आणि संपर्क',
+    wallet: 'वॉलेट', wallet_balance: 'वॉलेट बॅलन्स', add_money: 'पैसे जोडा', credit_debit_card: 'क्रेडिट / डेबिट कार्ड', internet_banking: 'इंटरनेट बँकिंग',
+    upi: 'युपीआय (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'कार्ड्स', add_card: 'कार्ड जोडा', qr_pay: 'क्यूआर (QR) पे', payment_methods: 'पेमेंट पद्धती',
+    transaction_history: 'व्यवहार इतिहास', paid: 'सशुल्क', refund: 'परतावा',
+  },
+
+  'ta': {
+    save: 'சேமி', cancel: 'ரத்து', edit: 'திருத்து', back: 'பின்னால்', link: 'இணை', unlink: 'இணைப்பு நீக்கு', change: 'மாற்று',
+    home: 'முகப்பு', rides: 'பயணங்கள்', account: 'கணக்கு',
+    personal_info: 'தனிப்பட்ட தகவல்', safety: 'பாதுகாப்பு', login_security: 'உள்நுழைவு & பாதுகாப்பு',
+    payment: 'கட்டணம்', settings: 'அமைப்புகள்', help_support: 'உதவி', logout: 'வெளியேறு',
+    full_name: 'முழு பெயர்', contact_number: 'தொடர்பு எண்', email_address: 'மின்னஞ்சல் முகவரி',
+    add_photo: 'சுயவிவர புகைப்படம் சேர்', change_photo: 'புகைப்படம் மாற்று',
+    language: 'மொழி', theme: 'தீம்', delete_account: 'கணக்கை நீக்கு', about: 'பற்றி',
+    light_mode: 'ஒளி பயன்முறை', dark_mode: 'இருண்ட பயன்முறை', system_mode: 'கணினி',
+    login_by_email: 'மின்னஞ்சல்', login_by_phone: 'தொலைபேசி எண்',
+    privacy_policy: 'தனியுரிமைக் கொள்கை', terms_conditions: 'விதிமுறைகள்', company_overview: 'நிறுவனம் பற்றி',
+    where_to: 'எங்கே செல்ல?', current_location: 'தற்போதைய இடம்', book_now: 'இப்போது பதிவு செய்',
+    verify_identity: 'அடையாளம் சரிபார்', link_now: 'இப்போது இணை', preferences: 'விருப்பத்தேர்வுகள்', danger_zone: 'ஆபத்து மண்டலம்',
+    bike: 'பைக்', auto: 'ஆட்டோ', private_car: 'தனிப்பட்ட கார்', bike_taxi: 'பைக் டாக்ஸி', jeep: 'ஜீப்', private_bus: 'தனிப்பட்ட பேருந்து', govt_bus: 'அரசு பேருந்து', car_taxi: 'கார் டாக்ஸி',
+    rentals: 'வாடகைகள்', intercity: 'வெளியூர்', package: 'பார்சல்', scheduled: 'திட்டமிடப்பட்டது', recent: 'சமீபத்திய',
+    ride_history: 'பயண வரலாறு', no_rides_yet: 'பயணங்கள் இல்லை', loading_rides: 'ஏற்றுகிறது...', retry: 'மீண்டும் முயற்சி',
+    popular_places: 'பிரபலமான இடங்கள்', search_results: 'தேடல் முடிவுகள்', estimated_fare: 'மதிப்பிடப்பட்ட கட்டணம்', eta: 'வருகை நேரம்', cash: 'பணம்', confirm: 'உறுதிப்படுத்து', pickup: 'பிக்கப்', drop: 'டிராப்',
+    subtitle_personal: 'பெயர், தொலைபேசி, மின்னஞ்சல்', subtitle_safety: 'அவசர தொடர்புகள் மற்றும் பாதுகாப்பு', subtitle_login: 'கடவுச்சொல், பின் மற்றும் இணைக்கப்பட்ட கணக்குகள்',
+    subtitle_payment: 'கட்டண முறைகளை நிர்வகிக்கவும்', subtitle_settings: 'மொழி, தீம் மற்றும் பல', subtitle_support: 'கேள்விகள் மற்றும் தொடர்பு கொள்ளவும்',
+    wallet: 'வாலட்', wallet_balance: 'வாலட் இருப்பு', add_money: 'பணம் சேர்க்க', credit_debit_card: 'கிரெடிட் / டெபிட் கார்டு', internet_banking: 'இணைய வங்கி',
+    upi: 'யுபிஐ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'கார்டுகள்', add_card: 'கார்டு சேர்க்க', qr_pay: 'கியூஆர் (QR) பே', payment_methods: 'கட்டண முறைகள்',
+    transaction_history: 'பரிவர்த்தனை வரலாறு', paid: 'செலுத்தப்பட்டது', refund: 'பணம் திரும்பக் கிடைத்தல்',
+  },
+
+  'gu': {
+    save: 'સાચવો', cancel: 'રદ કરો', edit: 'સંપાદિત કરો', back: 'પાછા', link: 'લિંક', unlink: 'અનલિંક', change: 'બદલો',
+    home: 'હોમ', rides: 'સવારી', account: 'ખાતું',
+    personal_info: 'વ્યક્તિગત માહિતી', safety: 'સલામતી', login_security: 'લૉગિન અને સુરક્ષા',
+    payment: 'ચુકવણી', settings: 'સેટિંગ્સ', help_support: 'સહાય', logout: 'લૉગ આઉટ',
+    full_name: 'પૂરું નામ', contact_number: 'સંપર્ક નંબર', email_address: 'ઈમેઇલ સરનામું',
+    add_photo: 'પ્રોફાઇલ ફોટો ઉમેરો', change_photo: 'ફોટો બદલો',
+    language: 'ભાષા', theme: 'થીમ', delete_account: 'ખાતું કાઢી નાખો', about: 'વિશે',
+    light_mode: 'લાઇટ મોડ', dark_mode: 'ડાર્ક મોડ', system_mode: 'સિસ્ટમ',
+    login_by_email: 'ઈમેઇલ', login_by_phone: 'ફોન નંબર',
+    privacy_policy: 'ગોપનીયતા નીતિ', terms_conditions: 'નિયમો અને શરતો', company_overview: 'કંપની વિહંગાવલોકન',
+    where_to: 'ક્યાં જવું છે?', current_location: 'વર્તમાન સ્થાન', book_now: 'અત્યારે બુક કરો',
+    verify_identity: 'ઓળખ ચકાસો', link_now: 'અત્યારે લિંક', preferences: 'પ્રાધાન્ય', danger_zone: 'ભય ઝોન',
+    bike: 'બાઇક', auto: 'ઓટો', private_car: 'પ્રાઇવેટ કાર', bike_taxi: 'બાઇક ટેક્સી', jeep: 'જીપ', private_bus: 'પ્રાઇવેટ બસ', govt_bus: 'સરકારી બસ', car_taxi: 'કાર ટેક્સી',
+    rentals: 'ભાડા', intercity: 'ઇન્ટરસિટી', package: 'પેકેજ', scheduled: 'શેડ્યૂલ', recent: 'તાજેતરનું',
+    ride_history: 'સવારી ઇતિહાસ', no_rides_yet: 'હજુ કોઈ સવારી નથી', loading_rides: 'લોડ થઈ રહ્યું છે...', retry: 'ફરી પ્રયાસ કરો',
+    popular_places: 'લોકપ્રિય સ્થાનો', search_results: 'શોધ પરિણામો', estimated_fare: 'અંદાજિત ભાડું', eta: 'આગમન સમય', cash: 'રોકડ', confirm: 'પુષ્ટિ કરો', pickup: 'પિકઅપ', drop: 'ડ્રોપ',
+    subtitle_personal: 'નામ, ફોન, ઈમેલ', subtitle_safety: 'ઇમરજન્સી સંપર્કો અને સલામતી', subtitle_login: 'પાસવર્ડ, પિન અને લિંક કરેલા એકાઉન્ટ્સ',
+    subtitle_payment: 'ચુકવણી પદ્ધતિઓનું સંચાલન કરો', subtitle_settings: 'ભાષા, થીમ અને વધુ', subtitle_support: 'પ્રશ્નો અને સંપર્ક કરો',
+    wallet: 'વૉલેટ', wallet_balance: 'વૉલેટ બેલેન્સ', add_money: 'પૈસા ઉમેરો', credit_debit_card: 'ક્રેડિટ / ડેબિટ કાર્ડ', internet_banking: 'ઇન્ટરનેટ બેન્કિંગ',
+    upi: 'યુપીઆઈ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'કાર્ડ્સ', add_card: 'કાર્ડ ઉમેરો', qr_pay: 'ક્યૂઆર (QR) પે', payment_methods: 'ચુકવણી પદ્ધતિઓ',
+    transaction_history: 'વ્યવહાર ઇતિહાસ', paid: 'ચૂકવેલ', refund: 'રિફંડ',
+  },
+
+  'kn': {
+    save: 'ಉಳಿಸು', cancel: 'ರದ್ದುಮಾಡು', edit: 'ಸಂಪಾದಿಸು', back: 'ಹಿಂದೆ', link: 'ಲಿಂಕ್', unlink: 'ಅನ್‌ಲಿಂಕ್', change: 'ಬದಲಿಸು',
+    home: 'ಮನೆ', rides: 'ಸವಾರಿ', account: 'ಖಾತೆ',
+    personal_info: 'ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ', safety: 'ಸುರಕ್ಷತೆ', login_security: 'ಲಾಗಿನ್ & ಭದ್ರತೆ',
+    payment: 'ಪಾವತಿ', settings: 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು', help_support: 'ಸಹಾಯ', logout: 'ಲಾಗ್ ಔಟ್',
+    full_name: 'ಪೂರ್ಣ ಹೆಸರು', contact_number: 'ಸಂಪರ್ಕ ಸಂಖ್ಯೆ', email_address: 'ಇಮೇಲ್ ವಿಳಾಸ',
+    add_photo: 'ಪ್ರೊಫೈಲ್ ಫೋಟೋ ಸೇರಿಸು', change_photo: 'ಫೋಟೋ ಬದಲಿಸು',
+    language: 'ಭಾಷೆ', theme: 'ಥೀಮ್', delete_account: 'ಖಾತೆ ಅಳಿಸು', about: 'ಬಗ್ಗೆ',
+    light_mode: 'ಲೈಟ್ ಮೋಡ್', dark_mode: 'ಡಾರ್ಕ್ ಮೋಡ್', system_mode: 'ಸಿಸ್ಟಮ್',
+    login_by_email: 'ಇಮೇಲ್', login_by_phone: 'ಫೋನ್ ಸಂಖ್ಯೆ',
+    privacy_policy: 'ಗೌಪ್ಯತಾ ನೀತಿ', terms_conditions: 'ನಿಯಮಗಳು', company_overview: 'ಕಂಪನಿ ಅವಲೋಕನ',
+    where_to: 'ಎಲ್ಲಿಗೆ?', current_location: 'ಪ್ರಸ್ತುತ ಸ್ಥಳ', book_now: 'ಈಗ ಬುಕ್ ಮಾಡಿ',
+    verify_identity: 'ಗುರುತು ಪರಿಶೀಲಿಸು', link_now: 'ಈಗ ಲಿಂಕ್', preferences: 'ಆದ್ಯತೆಗಳು', danger_zone: 'ಅಪಾಯ ವಲಯ',
+    bike: 'ಬೈಕ್', auto: 'ಆಟೋ', private_car: 'ಖಾಸಗಿ ಕಾರು', bike_taxi: 'ಬೈಕ್ ಟ್ಯಾಕ್ಸಿ', jeep: 'ಜೀಪ್', private_bus: 'ಖಾಸಗಿ ಬಸ್', govt_bus: 'ಸರ್ಕಾರಿ ಬಸ್', car_taxi: 'ಕಾರ್ ಟ್ಯಾಕ್ಸಿ',
+    rentals: 'ಬಾಡಿಗೆ', intercity: 'ಅಂತರನಗರ', package: 'ಪ್ಯಾಕೇಜ್', scheduled: 'ನಿಗದಿತ', recent: 'ಇತ್ತೀಚಿನ',
+    ride_history: 'ಸವಾರಿ ಇತಿಹಾಸ', no_rides_yet: 'ಯಾವುದೇ ಸವಾರಿಗಳಿಲ್ಲ', loading_rides: 'ಲೋಡ್ ಆಗುತ್ತಿದೆ...', retry: 'ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ',
+    popular_places: 'ಜನಪ್ರಿಯ ಸ್ಥಳಗಳು', search_results: 'ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು', estimated_fare: 'ಅಂದಾಜು ದರ', eta: 'ಆಗಮನದ ಸಮಯ', cash: 'ನಗದು', confirm: 'ಖಚಿತಪಡಿಸಿ', pickup: 'ಪಿಕಪ್', drop: 'ಡ್ರಾಪ್',
+    subtitle_personal: 'ಹೆಸರು, ಫೋನ್, ಇಮೇಲ್', subtitle_safety: 'ತುರ್ತು ಸಂಪರ್ಕಗಳು ಮತ್ತು ಸುರಕ್ಷತೆ', subtitle_login: 'ಪಾಸ್‌ವರ್ಡ್, ಪಿನ್ ಮತ್ತು ಲಿಂಕ್ ಮಾಡಿದ ಖಾತೆಗಳು',
+    subtitle_payment: 'ಪಾವತಿ ವಿಧಾನಗಳನ್ನು ನಿರ್ವಹಿಸಿ', subtitle_settings: 'ಭಾಷೆ, ಥೀಮ್ ಮತ್ತು ಇನ್ನಷ್ಟು', subtitle_support: 'ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಸಂಪರ್ಕಿಸಿ',
+    wallet: 'ವ್ಯಾಲೆಟ್', wallet_balance: 'ವ್ಯಾಲೆಟ್ ಬ್ಯಾಲೆನ್ಸ್', add_money: 'ಹಣ ಸೇರಿಸಿ', credit_debit_card: 'ಕ್ರೆಡಿಟ್ / ಡೆಬಿಟ್ ಕಾರ್ಡ್', internet_banking: 'ಇಂಟರ್ನೆಟ್ ಬ್ಯಾಂಕಿಂಗ್',
+    upi: 'ಯುಪಿಐ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'ಕಾರ್ಡ್‌ಗಳು', add_card: 'ಕಾರ್ಡ್ ಸೇರಿಸಿ', qr_pay: 'ಕ್ಯೂಆರ್ (QR) ಪೇ', payment_methods: 'ಪಾವತಿ ವಿಧಾನಗಳು',
+    transaction_history: 'ವಹಿವಾಟಿನ ಇತಿಹಾಸ', paid: 'ಪಾವತಿಸಲಾಗಿದೆ', refund: 'ಮರುಪಾವತಿ',
+  },
+
+  'ml': {
+    save: 'സേവ്', cancel: 'റദ്ദാക്കുക', edit: 'എഡിറ്റ്', back: 'തിരികെ', link: 'ലിങ്ക്', unlink: 'അൺലിങ്ക്', change: 'മാറ്റുക',
+    home: 'ഹോം', rides: 'യാത്രകൾ', account: 'അക്കൗണ്ട്',
+    personal_info: 'വ്യക്തിഗത വിവരങ്ങൾ', safety: 'സുരക്ഷ', login_security: 'ലോഗിൻ & സുരക്ഷ',
+    payment: 'പേയ്‌മെന്റ്', settings: 'ക്രമീകരണങ്ങൾ', help_support: 'സഹായം', logout: 'ലോഗ് ഔട്ട്',
+    full_name: 'പൂർണ്ണ നാമം', contact_number: 'ബന്ധപ്പെടാനുള്ള നമ്പർ', email_address: 'ഇമെയിൽ വിലാസം',
+    add_photo: 'പ്രൊഫൈൽ ഫോട്ടോ ചേർക്കുക', change_photo: 'ഫോട്ടോ മാറ്റുക',
+    language: 'ഭാഷ', theme: 'തീം', delete_account: 'അക്കൗണ്ട് ഇല്ലാതാക്കുക', about: 'കുറിച്ച്',
+    light_mode: 'ലൈറ്റ് മോഡ്', dark_mode: 'ഡാർക്ക് മോഡ്', system_mode: 'സിസ്റ്റം',
+    login_by_email: 'ഇമെയിൽ', login_by_phone: 'ഫോൺ നമ്പർ',
+    privacy_policy: 'സ്വകാര്യതാ നയം', terms_conditions: 'നിബന്ധനകൾ', company_overview: 'കമ്പനി അവലോകനം',
+    where_to: 'എവിടേക്ക്?', current_location: 'നിലവിലെ സ്ഥാനം', book_now: 'ഇപ്പോൾ ബുക്ക് ചെയ്യുക',
+    verify_identity: 'ഐഡന്റിറ്റി പരിശോധിക്കുക', link_now: 'ഇപ്പോൾ ലിങ്ക്', preferences: 'മുൻഗണനകൾ', danger_zone: 'അപകട മേഖല',
+    bike: 'ബൈക്ക്', auto: 'ഓട്ടോ', private_car: 'പ്രൈവറ്റ് കാർ', bike_taxi: 'ബൈക്ക് ടാക്സി', jeep: 'ജീപ്പ്', private_bus: 'പ്രൈവറ്റ് ബസ്', govt_bus: 'സർക്കാർ ബസ്', car_taxi: 'കാർ ടാക്സി',
+    rentals: 'വാടക', intercity: 'ഇന്റർസിറ്റി', package: 'പാക്കേജ്', scheduled: 'ഷെഡ്യൂൾഡ്', recent: 'സമീപകാല',
+    ride_history: 'യാത്രാ ചരിത്രം', no_rides_yet: 'യാത്രകൾ ഒന്നുമില്ല', loading_rides: 'ലോഡുചെയ്യുന്നു...', retry: 'വീണ്ടും ശ്രമിക്കുക',
+    popular_places: 'ജനപ്രിയ സ്ഥലങ്ങൾ', search_results: 'തിരയൽ ഫലങ്ങൾ', estimated_fare: 'ഏകദേശ നിരക്ക്', eta: 'എത്തുന്ന സമയം', cash: 'പണം', confirm: 'സ്ഥിരീകരിക്കുക', pickup: 'പിക്കപ്പ്', drop: 'ഡ്രോപ്പ്',
+    subtitle_personal: 'പേര്, ഫോൺ, ഇമെയിൽ', subtitle_safety: 'അടിയന്തര സമ്പർക്കങ്ങളും സുരക്ഷയും', subtitle_login: 'പാസ്‌വേഡ്, പിൻ, ലിങ്ക് ചെയ്ത അക്കൗണ്ടുകൾ',
+    subtitle_payment: 'പേയ്‌മെന്റ് രീതികൾ നിയന്ത്രിക്കുക', subtitle_settings: 'ഭാഷ, തീം എന്നിവയും നിയന്ത്രിക്കുക', subtitle_support: 'പതിവുചോദ്യങ്ങളും ബന്ധപ്പെടുക',
+    wallet: 'വാലറ്റ്', wallet_balance: 'വാലറ്റ് ബാലൻസ്', add_money: 'പണം ചേർക്കുക', credit_debit_card: 'ക്രെഡിట్ / ഡെബിറ്റ് കാർഡ്', internet_banking: 'ഇന്റർനെറ്റ് ബാങ്കിംഗ്',
+    upi: 'യുപിഐ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'കാർഡുകൾ', add_card: 'കാർഡ് ചേർക്കുക', qr_pay: 'ക്യുആർ (QR) പേ', payment_methods: 'പേയ്‌മെന്റ് രീതികൾ',
+    transaction_history: 'ഇടപാട് ചരിത്രം', paid: 'പണം നൽകി', refund: 'റീഫണ്ട്',
+  },
+
+  'pa': {
+    save: 'ਸੁਰੱਖਿਅਤ ਕਰੋ', cancel: 'ਰੱਦ ਕਰੋ', edit: 'ਸੰਪਾਦਿਤ ਕਰੋ', back: 'ਵਾਪਸ', link: 'ਲਿੰਕ', unlink: 'ਅਨਲਿੰਕ', change: 'ਬਦਲੋ',
+    home: 'ਹੋਮ', rides: 'ਸਵਾਰੀਆਂ', account: 'ਖਾਤਾ',
+    personal_info: 'ਨਿੱਜੀ ਜਾਣਕਾਰੀ', safety: 'ਸੁਰੱਖਿਆ', login_security: 'ਲੌਗਿਨ ਅਤੇ ਸੁਰੱਖਿਆ',
+    payment: 'ਭੁਗਤਾਨ', settings: 'ਸੈਟਿੰਗਾਂ', help_support: 'ਮਦਦ', logout: 'ਲਾਗ ਆਉਟ',
+    full_name: 'ਪੂਰਾ ਨਾਮ', contact_number: 'ਸੰਪਰਕ ਨੰਬਰ', email_address: 'ਈਮੇਲ ਪਤਾ',
+    add_photo: 'ਪ੍ਰੋਫਾਈਲ ਫ਼ੋਟੋ ਜੋੜੋ', change_photo: 'ਫ਼ੋਟੋ ਬਦਲੋ',
+    language: 'ਭਾਸ਼ਾ', theme: 'ਥੀਮ', delete_account: 'ਖਾਤਾ ਮਿਟਾਓ', about: 'ਬਾਰੇ',
+    light_mode: 'ਲਾਈਟ ਮੋਡ', dark_mode: 'ਡਾਰਕ ਮੋਡ', system_mode: 'ਸਿਸਟਮ',
+    login_by_email: 'ਈਮੇਲ', login_by_phone: 'ਫ਼ੋਨ ਨੰਬਰ',
+    privacy_policy: 'ਗੋਪਨੀਯਤਾ ਨੀਤੀ', terms_conditions: 'ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ', company_overview: 'ਕੰਪਨੀ ਝਾਤ',
+    where_to: 'ਕਿੱਥੇ ਜਾਣਾ ਹੈ?', current_location: 'ਮੌਜੂਦਾ ਸਥਾਨ', book_now: 'ਹੁਣੇ ਬੁੱਕ ਕਰੋ',
+    verify_identity: 'ਪਛਾਣ ਤਸਦੀਕ ਕਰੋ', link_now: 'ਹੁਣੇ ਲਿੰਕ ਕਰੋ', preferences: 'ਤਰਜੀਹਾਂ', danger_zone: 'ਖ਼ਤਰੇ ਦਾ ਖੇਤਰ',
+    bike: 'ਬਾਈਕ', auto: 'ਆਟੋ', private_car: 'ਪ੍ਰਾਈਵੇਟ ਕਾਰ', bike_taxi: 'ਬਾਈਕ ਟੈਕਸੀ', jeep: 'ਜੀਪ', private_bus: 'ਪ੍ਰਾਈਵੇਟ ਬੱਸ', govt_bus: 'ਸਰਕਾਰੀ ਬੱਸ', car_taxi: 'ਕਾਰ ਟੈਕਸੀ',
+    rentals: 'ਕਿਰਾਏ', intercity: 'ਇੰਟਰਸਿਟੀ', package: 'ਪੈਕੇਜ', scheduled: 'ਨਿਰਧਾਰਿਤ', recent: 'ਤਾਜ਼ਾ',
+    ride_history: 'ਰਾਈਡ ਇਤਿਹਾਸ', no_rides_yet: 'ਕੋਈ ਰਾਈਡ ਨਹੀਂ', loading_rides: 'ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...', retry: 'ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
+    popular_places: 'ਮਸ਼ਹੂਰ ਥਾਵਾਂ', search_results: 'ਖੋਜ ਨਤੀਜੇ', estimated_fare: 'ਅਨੁਮਾਨਿਤ ਕਿਰਾਇਆ', eta: 'ਆਉਣ ਦਾ ਸਮਾਂ', cash: 'ਕੈਸ਼', confirm: 'ਪੁਸ਼ਟੀ ਕਰੋ', pickup: 'ਪਿਕਅੱਪ', drop: 'ਡ੍ਰੌਪ',
+    subtitle_personal: 'ਨਾਮ, ਫ਼ੋਨ, ਈਮੇਲ', subtitle_safety: 'ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ ਅਤੇ ਸੁਰੱਖਿਆ', subtitle_login: 'ਪਾਸਵਰਡ, ਪਿੰਨ ਅਤੇ ਲਿੰਕ ਕੀਤੇ ਖਾਤੇ',
+    subtitle_payment: 'ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ', subtitle_settings: 'ਭਾਸ਼ਾ, ਥੀਮ ਅਤੇ ਹੋਰ', subtitle_support: 'ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ ਅਤੇ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
+    wallet: 'ਵਾਲੇਟ', wallet_balance: 'ਵਾਲੇਟ ਬੈਲੇਂਸ', add_money: 'ਪੈਸੇ ਜੋੜੋ', credit_debit_card: 'ਕ੍ਰੈਡਿਟ / ਡੈਬਿਟ ਕਾਰਡ', internet_banking: 'ਇੰਟਰਨੈੱਟ ਬੈਂਕਿੰਗ',
+    upi: 'ਯੂਪੀਆਈ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'ਕਾਰਡ', add_card: 'ਕਾਰਡ ਜੋੜੋ', qr_pay: 'ਕਯੂਆਰ (QR) ਪੇ', payment_methods: 'ਭੁਗਤਾਨ ਦੇ ਤਰੀਕੇ',
+    transaction_history: 'ਲੈਣ-ਦੇਣ ਦਾ ਇਤਿਹਾਸ', paid: 'ਭੁਗਤਾਨ ਕੀਤਾ', refund: 'ਰਿਫੰਡ',
+  },
+
+  'or': {
+    save: 'ସଞ୍ଚୟ', cancel: 'ବାତିଲ', edit: 'ସଂପାଦନ', back: 'ଫେରନ୍ତୁ', link: 'ଲିଙ୍କ', unlink: 'ଅନ୍‌ଲିଙ୍କ', change: 'ବଦଳ',
+    home: 'ହୋମ', rides: 'ଯାତ୍ରା', account: 'ଖାତା',
+    personal_info: 'ବ୍ୟକ୍ତିଗତ ସୂଚନା', safety: 'ସୁରକ୍ଷା', login_security: 'ଲଗଇନ ଓ ସୁରକ୍ଷା',
+    payment: 'ଦେୟ', settings: 'ସେଟିଂ', help_support: 'ସହାୟତା', logout: 'ଲଗ ଆଉଟ',
+    full_name: 'ପୂର୍ଣ ନାମ', contact_number: 'ଯୋଗାଯୋଗ ନମ୍ବର', email_address: 'ଇମେଲ ଠିକଣା',
+    add_photo: 'ପ୍ରୋଫାଇଲ ଫଟୋ ଯୋଡ଼ନ୍ତୁ', change_photo: 'ଫଟୋ ବଦଳ',
+    language: 'ଭାଷା', theme: 'ଥିମ', delete_account: 'ଖାତା ଡିଲିଟ', about: 'ବିଷୟରେ',
+    light_mode: 'ଲାଇଟ ମୋଡ', dark_mode: 'ଡାର୍କ ମୋଡ', system_mode: 'ସିଷ୍ଟମ',
+    login_by_email: 'ଇମେଲ', login_by_phone: 'ଫୋନ ନମ୍ବର',
+    privacy_policy: 'ଗୋପନୀୟତା ନୀତି', terms_conditions: 'ନିୟମ ଓ ଶର୍ତ', company_overview: 'କମ୍ପାନୀ ବିବରଣ',
+    where_to: 'କେଉଁଠି ଯିବେ?', current_location: 'ବର୍ତ୍ତମାନ ସ୍ଥାନ', book_now: 'ବର୍ତ୍ତମାନ ବୁକ',
+    verify_identity: 'ପରିଚୟ ଯାଞ୍ଚ', link_now: 'ବର୍ତ୍ତମାନ ଲିଙ୍କ', preferences: 'ପ୍ରାଥମିକତା', danger_zone: 'ବିପଦ କ୍ଷେତ୍ର',
+    bike: 'ବାଇକ୍', auto: 'ଅଟୋ', private_car: 'ପ୍ରାଇଭେଟ୍ କାର୍', bike_taxi: 'ବାଇକ୍ ଟ୍ୟାକ୍ସି', jeep: 'ଜିପ୍', private_bus: 'ପ୍ରାଇଭେଟ୍ ବସ୍', govt_bus: 'ସରକାରୀ ବସ୍', car_taxi: 'କାର୍ ଟ୍ୟାକ୍ସି',
+    rentals: 'ଭଡା', intercity: 'ଇଣ୍ଟରସିଟି', package: 'ପ୍ୟାକେଜ୍', scheduled: 'ନିର୍ଦ୍ଧାରିତ', recent: 'ସାମ୍ପ୍ରତିକ',
+    ride_history: 'ରାଇଡ୍ ଇତିହାସ', no_rides_yet: 'କୌଣସି ରାଇଡ୍ ନାହିଁ', loading_rides: 'ଲୋଡ୍ ହେଉଛି...', retry: 'ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ',
+    popular_places: 'ଲୋକପ୍ରିୟ ସ୍ଥାନ', search_results: 'ସନ୍ଧାନ ଫଳାଫଳ', estimated_fare: 'ଆନୁମାନିକ ଭଡା', eta: 'ଆଗମନ ସମୟ', cash: 'ନଗଦ', confirm: 'ନିଶ୍ଚିତ କରନ୍ତୁ', pickup: 'ପିକଅପ୍', drop: 'ଡ୍ରପ୍',
+    subtitle_personal: 'ନାମ, ଫୋନ୍, ଇମେଲ୍', subtitle_safety: 'ଜରୁରୀକାଳୀନ ଯୋଗାଯୋଗ ଏବଂ ସୁରକ୍ଷା', subtitle_login: 'ପାସୱାର୍ଡ, ପିନ୍ ଏବଂ ଲିଙ୍କ୍ ହୋଇଥିବା ଖାତା',
+    subtitle_payment: 'ପେମେଣ୍ଟ ପଦ୍ଧତି ପରିଚାଳନା କରନ୍ତୁ', subtitle_settings: 'ଭାଷା, ଥିମ୍ ଏବଂ ଅଧିକ', subtitle_support: 'ସାଧାରଣ ପ୍ରଶ୍ନ ଏବଂ ଯୋଗାଯୋଗ',
+    wallet: 'ୱାଲେଟ୍', wallet_balance: 'ୱାଲେଟ୍ ବାଲାନ୍ସ', add_money: 'ଟଙ୍କା ଯୋଡ଼ନ୍ତୁ', credit_debit_card: 'କ୍ରେଡିଟ୍ / ଡେବିଟ୍ କାର୍ଡ', internet_banking: 'ଇଣ୍ଟରନେଟ୍ ବ୍ୟାଙ୍କିଙ୍ଗ୍',
+    upi: 'ୟୁପିଆଇ (UPI)', gpay: 'Google Pay', phonepe: 'PhonePe', paytm: 'Paytm', cards: 'କାର୍ଡ', add_card: 'କାର୍ଡ ଯୋଡ଼ନ୍ତୁ', qr_pay: 'କ୍ୟୁଆର୍ (QR) ପେ', payment_methods: 'ପେମେଣ୍ଟ ପଦ୍ଧତି',
+    transaction_history: 'କାରବାର ଇତିହାସ', paid: 'ପେଡ୍', refund: 'ରିଫଣ୍ଡ',
+  },
+
+  // Remaining languages fall back to English via the `t()` function
+  'as': BASE, 'bho': BASE, 'brx': BASE, 'doi': BASE, 'ks': BASE,
+  'kok': BASE, 'mai': BASE, 'mni': BASE, 'ne': BASE,
+  'sa': BASE, 'sat': BASE, 'sd': BASE, 'ur': BASE,
+};
+
+// ── Translation helper ─────────────────────────────────────────────────────
+export function t(key: TranslationKey, langCode: string): string {
+  const map = TRANSLATIONS[langCode] ?? BASE;
+  return map[key] ?? BASE[key] ?? key;
+}
